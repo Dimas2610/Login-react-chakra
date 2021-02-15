@@ -79,12 +79,6 @@ const LoginForm = () => {
           <Input type='password' placeholder='Introduzca su contraseña' />
         </FormControl>
         
-        <Stack>
-          <Button colorScheme="blue" mt={5} >Sign In</Button>
-        </Stack>
-        
-        
-       
         <Stack isInline justifyContent='space-between' mt={4}>
             <Box>
               <Checkbox>Remember Me</Checkbox>
@@ -93,9 +87,14 @@ const LoginForm = () => {
               <Link color={`${VARIANT_COLOR}.500`}>Forgot your password?</Link>
             </Box>
         </Stack>
+
         <Stack>
+          <Button colorScheme="blue" mt={5} >Sign In</Button>
+        </Stack>    
+             
+        <Stack flexDirection='row' justifyContent='center' mt={4}>
           <Box>
-            <Checkbox>Not a member?</Checkbox>
+            Not a member?<Link color={`${VARIANT_COLOR}.500`}> Signup now</Link>
           </Box>
         </Stack>
       </form>

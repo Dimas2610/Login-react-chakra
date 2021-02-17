@@ -10,7 +10,6 @@ import {
   useColorMode,
   Heading,
   Text,
-  Link,
   FormControl,
   FormLabel,
   Input,
@@ -18,8 +17,15 @@ import {
   Checkbox,
   Button
 } from '@chakra-ui/react';
-import { AccordionButton } from "@chakra-ui/react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import { PhoneIcon, SunIcon } from '@chakra-ui/icons';
+import Register from "../Register/Register";
+
 const VARIANT_COLOR = 'teal'
 
 const Login = () => {
@@ -84,22 +90,23 @@ const LoginForm = () => {
               <Checkbox>Recordarme</Checkbox>
             </Box>
             <Box>
-              <Link color={`${VARIANT_COLOR}.500`}>¿Has olvidado la contraseña?</Link>
+              <Link color={`${VARIANT_COLOR}.500`} >¿Has olvidado la contraseña?</Link>
             </Box>
         </Stack>
-
+            
         <Stack>
           <Button colorScheme="blue" mt={5} >Entrar</Button>
         </Stack>    
              
         <Stack flexDirection='row' justifyContent='center' mt={4}>
           <Box>
-            ¿No es un miembro?<Link color={`${VARIANT_COLOR}.500`}> Registrarse</Link>
+            ¿No es un miembro?<Link color={`${VARIANT_COLOR}.500`} to="/Register"> Registrarse</Link>             
           </Box>
         </Stack>
       </form>
     </Box>
   )
+  
 }
 
 export default Login
